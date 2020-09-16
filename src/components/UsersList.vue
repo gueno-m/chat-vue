@@ -23,3 +23,19 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+ul {
+  /* margin: auto; */
+  padding: 0;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style:none;
+  text-align: left;
+}
+
+</style>

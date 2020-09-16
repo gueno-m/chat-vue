@@ -1,5 +1,5 @@
 <template>
-  <ul>{{user.name}}</ul>
+  <li>{{user.username}}</li>
 </template>
 
 <script>
@@ -13,6 +13,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+li {
+  margin-left: 0;
+  text-align: left;
+  padding-left: 10%;
+  padding-top: 5%;
+}
 
 </style>

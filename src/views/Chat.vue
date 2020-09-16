@@ -1,8 +1,14 @@
 <template>
     <div>
-        <UsersList :users="users"/>
-       <MessagesList :messages="messages" />
-       <MessagesBox @sendMessage="onSendMessage" />
+      <Logo/>
+      <a href="logout">SE DECONNECTER</a>
+      <div class="chat">
+        <UsersList :users="store.users"/>
+          <div class="discution">
+            <MessagesList :messages="store.messages" />
+            <MessagesBox @sendMessage="onSendMessage" />
+        </div>
+      </div>
     </div>
 </template>
 
@@ -11,35 +17,53 @@
 import MessagesBox from '../components/MessagesBox'
 import MessagesList from '../components/MessagesList'
 import UsersList from '../components/UsersList'
+import Logo from '../components/icons/Logo'
+
+import store from '../store'
+
 export default {
 
   data () {
     return {
-      users: [
-        { name: 'Pierre' },
-        { name: 'Paul' },
-        { name: 'Jack' }
-      ],
-      messages: [
-        { user: { name: 'Pierre' }, text: 'Message de Pierre' },
-        { user: { name: 'Paul' }, text: 'Message de Paul' }
-      ]
+      store
     }
   },
 
   methods: {
     onSendMessage (text) {
-      this.messages.push({
-        user: { name: 'Gueno' },
-        text
-      })
-    }
+      store.messageNew(text);
+      }
   },
 
   components: {
     MessagesBox,
     MessagesList,
-    UsersList
+    UsersList,
+    Logo
   }
 }
 </script>
+
+<style scoped>
+
+.chat {
+  width: 100%;
+  height: 620px;
+  display: flex;
+  flex-direction: row;
+}
+
+.discution {
+  margin: auto;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+a {
+  text-decoration: none;
+  padding: 10px;
+}
+
+</style>

@@ -10,6 +10,8 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "git": "^0.1.5",
+    "hooper": "^0.3.4",
+    "socket.io-client": "^2.3.0",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
   },
