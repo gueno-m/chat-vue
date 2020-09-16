@@ -141,8 +141,9 @@ button:hover {
 }
 
 .faq p span {
-    text-decoration: underline;
+    border-bottom: solid 1px black;
     cursor: pointer;
+    line-height: 150%;
 }
 
 .gauche, .droite {

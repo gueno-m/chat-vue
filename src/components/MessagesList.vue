@@ -48,9 +48,8 @@ export default {
 ul {
   margin: auto;
   padding: 10px;
-  width: 85%;
+  width: 98%;
   height: 550px;
-  border: solid 2px red;
   list-style:none;
   overflow-y: scroll;
   scrollbar-color: rebeccapurple green;

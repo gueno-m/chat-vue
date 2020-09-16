@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div @mousemove="mouseMove">
       <Logo/>
       <a href="logout">SE DECONNECTER</a>
       <div class="chat">
@@ -25,13 +25,18 @@ export default {
 
   data () {
     return {
-      store
+      store,
+      Logo
     }
   },
 
   methods: {
     onSendMessage (text) {
       store.messageNew(text);
+      },
+
+  mouseMove (e) {
+      Logo.mouveEye(e);
       }
   },
 
@@ -55,10 +60,11 @@ export default {
 
 .discution {
   margin: auto;
-  width: 70%;
+  width: 75%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  border-top: solid 1px #D0D0D0;
 }
 
 a {

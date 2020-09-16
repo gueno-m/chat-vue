@@ -7,7 +7,7 @@
 <style lang="scss">
 
 HTML, BODY {
-  padding: 0 !important;
+  padding: 0;
   margin: 0;
 }
 

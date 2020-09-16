@@ -51,7 +51,7 @@ export default {
 .hooper {
     margin: auto;
     margin-top: 20px;
-    width: 350px;
+    width: 75%;
     /* border-color: solid 2px #D0D0D0; */
 }
 

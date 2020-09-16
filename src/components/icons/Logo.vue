@@ -20,6 +20,12 @@
 
 <script>
 export default {
+    data () {
+      return {
+        x: 0,
+        y: 0
+      }
+    },
     props: {
     iconName: {
       type: String,
@@ -33,14 +39,20 @@ export default {
       type: [Number, String],
       default: 80
     },
-    iconColor: {
-      type: String,
-      default: 'red'
-    }
   },
   methods: {
-      mouveEye () {
-          console.log(this.$refs.eye);
+      mouveEye (e) {
+        this.x  = e.clientX*100/window.innerWidth+"%";
+        this.y  = e.clientY*100/window.innerHeight+"%";
+
+        for(i=0; i<2; i++) {
+          let p = this.$refs.eye;
+
+          p[i].style.left=this.x/2;
+          p[i].style.top=this.x/2;
+          p[i].style.transform=`translate(${this.x}, ${this.y})`;
+        }
+          // console.log(this.$refs.eye);
       }
   }
 }

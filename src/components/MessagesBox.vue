@@ -1,7 +1,7 @@
 <template>
   <div>
         <form @submit.prevent="onSubmit">
-            <input v-model='message' type="text" placeholder="Votre message...">
+            <input v-model='message' type="text" placeholder="Type a message">
             <button>&#x27A4;</button>
         </form>
   </div>
@@ -26,18 +26,25 @@ export default {
 
 <style scoped>
 
+div {
+  /* margin: auto; */
+  margin-top: 20px;
+}
+
 form {
   width: 100%;
+  display: flex;
 }
 
 input {
   margin: auto;
-border-radius: 20px;
+  margin-right: 5px;
+border-radius: 15px;
 border: none;
 color: black;
-padding: 10px;
+padding: 12px;
 background: rgb(240, 240, 240);
-width: 50%;
+width: 80%;
 }
 
 input:focus, button:focus {
@@ -46,8 +53,10 @@ input:focus, button:focus {
 
 button {
   margin: auto;
-    background-color: transparent;
+  margin-left: 0;
+     background: linear-gradient(to right,#EC5F65, #F39669);
     border: none;
+    border-radius: 50%;
     color:white;
     cursor: pointer;
     font-size: 1.6rem;
