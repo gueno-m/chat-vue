@@ -47,13 +47,13 @@ export default {
 
 ul {
   margin: auto;
-  padding: 10px 25px;
+  padding: 9px 25px;
   width: 98%;
   height: calc(100vh - 20%);
   list-style:none;
-  border-top: solid 1px #E8EEEF;
+  border-top: solid 1px rgba(232, 238, 239, 0.2);
   overflow-y: scroll;
-  scrollbar-width: thin;
+  /* scrollbar-width: thin; */
 }
 
 </style>

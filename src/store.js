@@ -57,10 +57,11 @@ const store = new Vue({
             });
 
             socket.on('messages update', ({ messages }) => {
-                this.messages = messages;
+                this.messages = this.parseGiphy(messages);
             });
 
             socket.on('message new', ({ message }) => {
+                message = this.parseGiphy([message])[0];
                 this.messages.push(message);
             });
 
@@ -73,6 +74,22 @@ const store = new Vue({
             sessionStorage.clear();
             this.isRegistered = false;
             router.push('/login');
+        },
+
+        parseGiphy(messages) {
+            const regex = /https:\/\/.*giphy\.com.*\.gif/
+
+            return messages.map((message) => {
+                const giphyLink = message.text.match(regex)
+                if (giphyLink) {
+                    message = {
+                        user: message.user,
+                        text: message.text.replace(regex, `<img src="${giphyLink[0]}" height="100">`),
+                        html: true
+                    }
+                }
+                return message
+            })
         },
 
         // API calls

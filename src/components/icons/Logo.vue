@@ -1,5 +1,5 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" :width="width" :height="height" viewBox="0 0 548.967 548.967" :aria-labelledby="iconName" role="presentation">
+  <svg class="eyeLogo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" :width="width" :height="height" viewBox="0 0 548.967 548.967" :aria-labelledby="iconName" role="presentation">
   <defs>
     <linearGradient id="a" data-name="Dégradé sans nom 6" x1="270.032" y1="428.626" x2="270.032" y2="102.78" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#ec5f65"/>
@@ -47,7 +47,7 @@ export default {
 
         
         const p = this.$refs.eye;
-        var transformAttr = ' translate(' + 50 + ',' + 50 + ')';
+        var transformAttr = ' translate(' + 32 + ',' + 32 + ')';
         p.setAttribute('transform', transformAttr);
 
         let eyePos = p.getAttribute('transform');

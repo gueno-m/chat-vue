@@ -1,9 +1,12 @@
 <template>
+<div>
+  <img :src="avatar" alt="">
     <li :class="[isCurrentUser ? 'current-user': 'other-user']">
         <em v-if="isCurrentUser">{{ message.user.username }}</em>
         <strong v-else>{{ message.user.username }}</strong> <br>
         <p> {{ message.text }} </p>
     </li>
+</div>
 </template>
 
 <script>
@@ -20,6 +23,9 @@ export default {
     message: {
       type: Object,
       required: true
+    },
+    avatar: {
+      type: String,
     }
   }
 }
@@ -31,7 +37,7 @@ li {
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
-  width: 45%;
+  width: 50%;
   font-size: 1rem;
   font-weight: 400;
   max-width: max-content;
@@ -77,6 +83,11 @@ em {
   pointer-events: none;
 }
 
-
+img {
+ margin: auto;
+ margin-left: 45px;
+ margin-right: 20px;
+ width: 36px;
+}
 
 </style>

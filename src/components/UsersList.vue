@@ -33,16 +33,19 @@ return {
 
 <style scoped>
 
+::-webkit-scrollbar {
+    width: 0px;
+}
+
 ul {
   padding: 0;
   width: 100%;
   height: 580px;
   display: flex;
+  text-align: left;
   flex-direction: column;
   list-style:none;
-  text-align: left;
   overflow-y: scroll;
-  scrollbar-width: none;
 }
 
 </style>

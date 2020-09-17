@@ -1,5 +1,5 @@
 <template>
-    <hooper :itemsToShow="1.5" :centerMode="true" :initialSlide="12">
+    <hooper :itemsToShow="1" :centerMode="true" :initialSlide="12">
   <slide>
     <img src="https://zupimages.net/up/20/38/4wwr.png" alt="">
   </slide>
@@ -72,9 +72,9 @@
   <slide>
     <img src="https://zupimages.net/up/20/38/iez2.png" alt="">
   </slide>
+
+  <hooper-navigation slot="hooper-addons"></hooper-navigation>
 </hooper>
-
-
 </template>
 
 <script>
@@ -109,13 +109,23 @@ export default {
     margin: auto;
     margin-top: 0px;
     margin-bottom: 0px;
-    width: 50%;
+    width: 90%;
     height: 150px;
     /* border-color: solid 2px #D0D0D0; */
 }
 
 .hooper:focus {
      outline-color: #D0D0D0;
+}
+
+.hooper-next:focus, .hooper-prev:focus {
+  outline: none;
+}
+
+.hooper-next svg, .hooper-prev svg {
+  fill: #D0D0D0;
+  height: 40px;
+  width: 40px;
 }
 
 img {

@@ -8,7 +8,7 @@
 
            <input type="text" v-model="username" required placeholder="Username">
 
-           <p class="indication">Drag to choose your monster</p>
+           <p class="indication">Choose your Mostr</p>
 
            <Slider/>
            
@@ -160,17 +160,19 @@ button:hover {
     line-height: 150%;
 }
 
-.gauche, .droite {
-    width: 50%;
-}
-
 .gauche {
+    width: 55%;
     background-color: white;
     display: flex;
 }
 
 .droite {
-    background-color: black;
+    width: 45%;
+    background-image: url('../assets/illus.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
 }
 
 </style>
