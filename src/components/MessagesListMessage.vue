@@ -31,9 +31,17 @@ li {
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
-  /* padding: 20px 0px; */
-  max-width: 45%;
+  width: 45%;
+  font-size: 1rem;
+  font-weight: 400;
+  max-width: max-content;
   text-align: left;
+}
+
+li strong {
+  font-size: .8rem;
+  font-weight: 300;
+  color: #E8EEEF;
 }
 
 li p {
@@ -61,7 +69,7 @@ li p {
 }
 
 .other-user p {
- background: linear-gradient(to right,#151A21, #242A32);
+ background: #242A32;
 }
 
 em {

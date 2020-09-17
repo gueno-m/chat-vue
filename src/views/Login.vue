@@ -103,19 +103,18 @@ button {
   width: 50%;
    font-size: 1rem;
    font-weight: 400;
-    background-image: linear-gradient(to right,#EC5F65, #F39669);
+    background-color: #F39669;
+    background-image: linear-gradient(to right,#EC5F65,  rgba(255,255,255,0));
     border: none;
     color:white;
     cursor: pointer;
     padding: 12px;
     border-radius: 15px;
-    transition: background-image .3s ease;
+    transition: background-color .5s ease;
 }
 
 button:hover {
-    background-image: linear-gradient(to right,#EC5F65, #EC5F65);
-    border: none;
-    transition: background-image .3s ease;
+    background-color:#EC5F65;
 }
 
 .faq {

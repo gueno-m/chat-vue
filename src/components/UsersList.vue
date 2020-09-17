@@ -3,15 +3,22 @@
         <UsersListUser
         v-for="(user, i) in users"
         :key="i"
-        :user="user"/>
+        :user="user" :avatar="avatars[user.username]"/>
     </ul>
 </template>
 
 <script>
+import store from '../store'
 
 import UsersListUser from './UsersListUser'
 
 export default {
+
+  data () {
+return {
+  avatars: store.avatars
+}
+  },
   props: {
     users: {
       type: Array
@@ -27,15 +34,17 @@ export default {
 <style scoped>
 
 ul {
-  /* margin: auto; */
   padding: 0;
-  width: 30%;
-  height: 100%;
+  width: 100%;
+  height: 580px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   list-style:none;
   text-align: left;
+  overflow-y: scroll;
+  /* scrollbar-color: #242A32 #1E232B;
+  scrollbar-width: thin; */
+  /* OU scrollbar-width: none; */
 }
 
 </style>

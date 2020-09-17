@@ -12,7 +12,7 @@ HTML, BODY {
 }
 
 BODY { 
-  background: linear-gradient(#242A32, #151A21);
+  background: linear-gradient(135deg, #242A32, #151A21);
   background-repeat: no-repeat;
   }
 
@@ -26,5 +26,6 @@ BODY {
   height: 100vh;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 </style>

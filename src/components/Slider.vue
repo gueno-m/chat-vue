@@ -1,25 +1,76 @@
 <template>
     <hooper :itemsToShow="1.25" :centerMode="true" :initialSlide="3">
   <slide>
-    slide 1
+    <img src="https://zupimages.net/up/20/38/4wwr.png" alt="">
   </slide>
   <slide>
-    slide 2
+   <img src="https://zupimages.net/up/20/38/cq6y.png" alt="">
   </slide>
   <slide>
-    slide 3
+    <img src="https://zupimages.net/up/20/38/fi7l.png" alt="">
   </slide>
   <slide>
-    slide 4
+   <img src="https://zupimages.net/up/20/38/8t3m.png" alt="">
   </slide>
   <slide>
-    slide 5
+    <img src="https://zupimages.net/up/20/38/s8fr.png" alt="">
   </slide>
   <slide>
-    slide 6
+    <img src="https://zupimages.net/up/20/38/pmn6.png" alt="">
   </slide>
   <slide>
-    slide 7
+    <img src="https://zupimages.net/up/20/38/lv78.png" alt="">
+  </slide>
+  <slide>
+    <img src="https://zupimages.net/up/20/38/frtf.png" alt="">
+  </slide>
+  <slide>
+    <img src="https://zupimages.net/up/20/38/fgve.png" alt="">
+  </slide>
+  <slide>
+    <img src="https://zupimages.net/up/20/38/ua22.png" alt="">
+  </slide>
+  <slide>
+    <img src="https://zupimages.net/up/20/38/wr1q.png" alt="">
+  </slide>
+  <slide>
+    <img src="https://zupimages.net/up/20/38/6vbh.png" alt="">
+  </slide>
+  <slide>
+    <img src="https://zupimages.net/up/20/38/ki2w.png" alt="">
+  </slide>
+  <slide>
+    <img src="https://zupimages.net/up/20/38/0m21.png" alt="">
+  </slide>
+  <slide>
+    <img src="https://zupimages.net/up/20/38/ft6j.png" alt="">
+  </slide>
+  <slide>
+    <img src="https://zupimages.net/up/20/38/lde1.png" alt="">
+  </slide>
+  <slide>
+    <img src="https://zupimages.net/up/20/38/wbfm.png" alt="">
+  </slide>
+  <slide>
+    <img src="https://zupimages.net/up/20/38/usi6.png" alt="">
+  </slide>
+  <slide>
+    <img src="https://zupimages.net/up/20/38/o9kf.png" alt="">
+  </slide>
+  <slide>
+    <img src="https://zupimages.net/up/20/38/7tjo.png" alt="">
+  </slide>
+  <slide>
+    <img src="https://zupimages.net/up/20/38/gcqc.png" alt="">
+  </slide>
+  <slide>
+    <img src="https://zupimages.net/up/20/38/neik.png" alt="">
+  </slide>
+  <slide>
+    <img src="https://zupimages.net/up/20/38/853z.png" alt="">
+  </slide>
+  <slide>
+    <img src="https://zupimages.net/up/20/38/iez2.png" alt="">
   </slide>
 </hooper>
 
@@ -32,6 +83,7 @@ import {
   Slide,
   Navigation as HooperNavigation
   } from 'hooper';
+import 'hooper/dist/hooper.css';
 
 export default {
   components: {
@@ -42,17 +94,21 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 
-    .hooper-slide.is-current {
-  transform: scale(1.2);
-}
+.hooper-slide {
+  display: flex;
+} 
 
 .hooper {
     margin: auto;
     margin-top: 20px;
     width: 75%;
     /* border-color: solid 2px #D0D0D0; */
+}
+
+svg {
+  margin: auto;
 }
 
 </style>
