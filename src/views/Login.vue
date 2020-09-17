@@ -8,6 +8,8 @@
 
            <input type="text" v-model="username" required placeholder="Username">
 
+           <p class="indication">Drag to choose your monster</p>
+
            <Slider/>
            
            <button>Login</button>
@@ -63,6 +65,7 @@ export default {
 form {
     margin: auto;
     width: 60%;
+    height: 100%;
     color: black;
     display: flex;
     flex-direction: column;
@@ -71,20 +74,22 @@ form {
 
 form h1, form h3 {
     font-weight: 400;
+    margin-bottom: 0;
 }
 
 form h1 {
     font-size: 3rem;
-    margin-bottom: 10px;
+    margin-top: 80px;
 }
 
 form h3 {
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 1rem;
 }
 input {
   margin: auto;
-  margin-top: 40px;
+  margin-top: 50px;
+  margin-bottom: 0;
   width: 100%;
 border-radius: 10px;
 border: solid 1px #D0D0D0;
@@ -97,9 +102,19 @@ input:focus, button:focus {
      outline:  none;
 }
 
+.indication {
+    margin: auto;
+    color: #D0D0D0;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 55px;
+    margin-bottom: 10px;
+}
+
 button {
   margin: auto;
-  margin-top: 40px;
+  margin-top: 35px;
+  margin-bottom: 0px;
   width: 50%;
    font-size: 1rem;
    font-weight: 400;
@@ -108,7 +123,7 @@ button {
     border: none;
     color:white;
     cursor: pointer;
-    padding: 12px;
+    padding: 16px;
     border-radius: 15px;
     transition: background-color .5s ease;
 }

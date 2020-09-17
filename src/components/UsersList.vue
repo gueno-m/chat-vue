@@ -42,9 +42,7 @@ ul {
   list-style:none;
   text-align: left;
   overflow-y: scroll;
-  /* scrollbar-color: #242A32 #1E232B;
-  scrollbar-width: thin; */
-  /* OU scrollbar-width: none; */
+  scrollbar-width: none;
 }
 
 </style>

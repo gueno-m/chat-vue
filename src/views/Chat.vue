@@ -4,7 +4,7 @@
       <div class="utilisateurs">
         <div class="logDec">
           <Logo ref="logo" />
-          <h1>MostrChat</h1>
+          <h1>Mostr <span>Chat</span></h1>
           <a href="logout"><svg xmlns="http://www.w3.org/2000/svg" width="14.423" height="17.127"
               viewBox="0 0 14.423 17.127">
               <g id="bx-power-off" transform="translate(-4 -2)" opacity="0.2">
@@ -110,7 +110,6 @@
     margin-bottom: 0;
     width: 100%;
     height: 9.8%;
-    /* border-right: solid 1px #E8EEEF; */
     border-bottom: solid 1px #E8EEEF;
     display: flex;
     flex-direction: row;
@@ -134,6 +133,10 @@
     font-weight: 500;
     font-size: 1.1rem;
     cursor: pointer;
+  }
+
+  .logDec h1 span {
+   background-color: #F39669;
   }
 
   .haut {
@@ -175,14 +178,17 @@
 
   .my-user img {
     margin: auto;
+    margin-left: 50px;
+    margin-right: 0;
     width: 36px;
   }
 
   .my-user p {
     margin: auto;
+    margin-left: 20px;
     font-size: 1rem;
     color: #E8EEEF;
-    font-weight: 500;
+    font-weight: 400;
   }
 
 </style>

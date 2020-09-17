@@ -60,7 +60,7 @@ export default {
          let yy = this.y - eyeY;
 
         let length = Math.sqrt(xx*xx+yy*yy); 
-        let size = 80;
+        let size = 60;
 
         if (length >= size){
           xx = xx/length*size; 

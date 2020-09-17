@@ -16,6 +16,10 @@ BODY {
   background-repeat: no-repeat;
   }
 
+::selection {
+    background-color: #F39669;
+}
+
 #app {
   font-family: 'Rubik', sans-serif;
   -webkit-font-smoothing: antialiased;
