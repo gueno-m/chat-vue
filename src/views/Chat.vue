@@ -4,9 +4,9 @@
       <div class="utilisateurs">
         <div class="logDec">
           <Logo ref="logo" />
-          <h1>Mostr <span>Chat</span></h1>
+          <h1>MostrChat</h1>
           <a href="logout"><svg xmlns="http://www.w3.org/2000/svg" width="14.423" height="17.127" fill="#e8eeef" viewBox="0 0 14.423 17.127">
-              <g id="bx-power-off" transform="translate(-4 -2)" opacity="0.2">
+              <g id="bx-power-off" transform="translate(-4 -2)">
                 <path id="Tracé_75" data-name="Tracé 75"
                   d="M11.211,19.481a7.209,7.209,0,0,0,2.7-13.892v2a5.409,5.409,0,1,1-5.409,0v-2a7.209,7.209,0,0,0,2.7,13.892Z"
                   transform="translate(0 -0.354)" />
@@ -15,9 +15,9 @@
             </svg></a>
         </div>
         <div class="actConv">
-          <p>Active Conversations</p>
+          <p>All active Mostr</p>
           <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="12" height="7.41" fill="#d0d0d0" viewBox="0 0 12 7.41">
-  <g id="ic_keyboard_arrow_up_24px" transform="translate(-6 -8)" opacity="0.2">
+  <g id="ic_keyboard_arrow_up_24px" transform="translate(-6 -8)">
     <path id="Tracé_78" data-name="Tracé 78" d="M7.41,15.41,12,10.83l4.59,4.58L18,14,12,8,6,14Z"/>
   </g>
 </svg></a>
@@ -32,7 +32,7 @@
         <div class="haut">
           <h1>MostrPrivate BDDI Room</h1>
           <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#e8eeef" viewBox="0 0 14 14">
-  <g id="ic_close_24px" opacity="0.2">
+  <g id="ic_close_24px">
     <path id="Tracé_73" data-name="Tracé 73" d="M19,6.41,17.59,5,12,10.59,6.41,5,5,6.41,10.59,12,5,17.59,6.41,19,12,13.41,17.59,19,19,17.59,13.41,12Z" transform="translate(-5 -5)"/>
   </g>
 </svg>
@@ -115,7 +115,7 @@
     margin-top: 0;
     margin-bottom: 0;
     width: 100%;
-    height: 10.1%;
+    height: 11%;
     border-bottom: solid 1px rgba(232, 238, 239, 0.2);
     display: flex;
     flex-direction: row;
@@ -137,11 +137,13 @@
     margin: auto;
     margin-left: auto;
     fill: #e8eeef;
+    opacity:0.2;
     transition: all .3s ease;
   }
 
   .logDec a:hover > svg {
     fill: #ec5f65;
+    opacity:1;
   }
 
   .logDec h1 {
@@ -152,14 +154,10 @@
     cursor: pointer;
   }
 
-  .logDec h1 span {
-   background-color: #F39669;
-  }
-
   .actConv {
      margin: auto;
-    margin-top: 20px;
-    margin-bottom: 0;
+    margin-top: 30px;
+    margin-bottom: 20px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -180,10 +178,12 @@
 
   .actConv a svg {
     fill: #e8eeef;
+    opacity:0.2;
     transition: all .3s ease;
   }
 
   .actConv a:hover > svg {
+    opacity:1;
     fill: #ec5f65;
   }
 
@@ -211,12 +211,14 @@
 
   .haut a svg {
     margin: auto;
+    opacity:0.2;
     fill: #e8eeef;
     transition: all .3s ease;
   }
 
   .haut a:hover > svg {
     fill: #ec5f65;
+    opacity:1;
   }
 
   a {
@@ -226,11 +228,11 @@
   .my-user {
     margin: auto;
     width: 85%;
-    height: 50px;
-    margin-bottom: 11px;
+    height: 58px;
+    margin-bottom: 20px;
     display: flex;
     background: #242A32;
-    border-radius: 20px;
+    border-radius: 15px;
   }
 
   .my-user img {

@@ -1,26 +1,26 @@
 <template>
-    <div class="container">
+    <div class="container" @mousemove="mouseMove">
         <div class="gauche">
        <form @submit.prevent="onSubmit">
 
            <h1>Welcome !</h1>
-           <h3>Sign in by entering the information bellow</h3>
+           <h3>Sign in to chat with other Mostr</h3>
 
            <input type="text" v-model="username" required placeholder="Username">
 
            <p class="indication">Choose your Mostr</p>
 
-           <Slider/>
+           <Slider @updateAvatar="onUpdateAvatar"/>
            
            <button>Login</button>
             <div class="faq">
             <input type="checkbox" id="" name="" required>
-           <p>J’ai lu et accepté les <span> Conditions d’Utilisation </span> et la <span> Politique de Confidentialité </span> de Mostr.</p>
+           <p>I have read and accepted the <span>Terms of Use</span> and <span>Privacy Policy</span> of the Mostr chatbox.</p>
            </div>
        </form>
        </div>
        <div class="droite">
-
+           <Eyes ref="eye" />
        </div>
        <!-- <div class="error" v-if="error">
            {{error.message}}
@@ -32,23 +32,34 @@
 
 import store from '../store'
 import Slider from '../components/Slider'
+import Eyes from '../components/icons/Eyes'
 
 export default {
 
   data () {
     return {
       username: '',
+      avatar:'',
+      Eyes
     }
   },
 
   methods: {
     onSubmit () {
-        store.userRegister(this.username);
+        store.userRegister(this.username, this.avatar);
         this.username = '';
+    },
+    onUpdateAvatar (url) {
+        this.avatar = url
+    },
+     mouseMove(e) {
+        this.$refs.eye.moveEye(e, this.$refs.eye.$refs.eyeUn,1300, 300);
+        this.$refs.eye.moveEye(e, this.$refs.eye.$refs.eyeDeux,1350, 300);
       }
   },
   components: {
-    Slider
+    Slider,
+    Eyes
   }
 }
 </script>
@@ -90,7 +101,7 @@ input {
   margin: auto;
   margin-top: 50px;
   margin-bottom: 0;
-  width: 100%;
+  width: 93%;
 border-radius: 10px;
 border: solid 1px #D0D0D0;
 color: black;
@@ -167,11 +178,13 @@ button:hover {
 }
 
 .droite {
+    position: relative;
     width: 45%;
-    background-image: url('../assets/illus.png');
+    background-image: url('../assets/mostr-without-eye.png');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center;
+    display: flex;
 
 }
 

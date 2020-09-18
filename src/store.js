@@ -12,7 +12,8 @@ const store = new Vue({
         user: {},
         users: [],
         messages: [],
-        avatars: {}
+        avatars: {},
+        AVATARS
     },
     methods: {
 
@@ -94,8 +95,7 @@ const store = new Vue({
 
         // API calls
 
-        userRegister(username) {
-            const avatar = 'https://toppng.com/uploads/preview/monkey-d-monkey-d-luffy-11563215336goels8qhmv.png'
+        userRegister(username, avatar) {
             socket.emit('user register', { username, avatar })
         },
 

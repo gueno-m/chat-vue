@@ -3,11 +3,11 @@
         <form @submit.prevent="onSubmit">
             <div>
              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#e8eeef" viewBox="0 0 20 20">
-  <g id="bxs-smiley-happy" opacity="0.2">
+  <g id="bxs-smiley-happy">
     <path id="Tracé_77" data-name="Tracé 77" d="M12,2A10,10,0,1,0,22,12,10.011,10.011,0,0,0,12,2ZM8.5,8c.828,0,1.5.9,1.5,2s-.672,2-1.5,2S7,11.1,7,10,7.672,8,8.5,8ZM12,18a5.954,5.954,0,0,1-4.8-2.4l1.6-1.2a4,4,0,0,0,6.4,0l1.6,1.2A5.955,5.955,0,0,1,12,18Zm3.5-6c-.828,0-1.5-.9-1.5-2s.672-2,1.5-2,1.5.9,1.5,2S16.328,12,15.5,12Z" transform="translate(-2 -2)"/>
   </g>
 </svg> 
-            <input v-model='message' type="text" placeholder="Type a message">
+            <input v-model='message' type="text" placeholder="Talk to other Mostr">
             </div>
             <button><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22.786 22.786">
   <g id="bxs-send" transform="translate(0 11.701) rotate(-45)">
@@ -47,6 +47,7 @@ export default {
 
 form {
   margin: auto;
+  margin-top: 0;
   width: 100%;
   display: flex;
 }
@@ -64,11 +65,14 @@ form div svg {
     margin: auto;
     margin-left: 20px;
     fill: #e8eeef;
+    opacity: 0.2;
+    cursor: pointer;
     transition: all .3s ease;
   }
 
   form div svg:hover {
     fill: #ec5f65;
+    opacity: 1;
   }
 
 input {
@@ -90,8 +94,8 @@ input:focus, button:focus {
 
 button {
   margin: auto;
-  /* margin-left: 0; */
-     background: linear-gradient(to right,#EC5F65, #F39669);
+  background-color: #F39669;
+    background-image: linear-gradient(to right,#EC5F65,  rgba(255,255,255,0));
     border: none;
     border-radius: 50%;
     color:white;
@@ -100,6 +104,12 @@ button {
     display: flex;
     height: 36px;
      width: 36px;
+     box-shadow: 120px 80px 40px 20px #EC5F65;
+    transition: background-color .5s ease;
+}
+
+button:hover {
+     background-color:#EC5F65;
 }
 
 button svg {

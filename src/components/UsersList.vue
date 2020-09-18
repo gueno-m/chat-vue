@@ -46,6 +46,7 @@ ul {
   flex-direction: column;
   list-style:none;
   overflow-y: scroll;
+  margin-bottom: 35px;
 }
 
 </style>

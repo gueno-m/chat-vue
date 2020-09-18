@@ -47,6 +47,7 @@ export default {
 
 ul {
   margin: auto;
+  margin-bottom: 20px;
   padding: 9px 25px;
   width: 98%;
   height: calc(100vh - 20%);
